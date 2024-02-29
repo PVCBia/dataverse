@@ -4,7 +4,7 @@
 export const data = [
   {
     id: "thiago-braz",
-    nome: "Thiago Braz",
+    name: "Thiago Braz",
     shortDescription: "Medalhista de ouro olímpico.",
     description:
       "Thiago Braz é um atleta brasileiro especializado em salto com vara. Ele ganhou destaque internacional ao conquistar a medalha de ouro nos Jogos Olímpicos de 2016 no Rio de Janeiro, estabelecendo um novo recorde olímpico no processo.",
@@ -22,7 +22,7 @@ export const data = [
   },
   {
     id: "sabrina-sato",
-    nome: "Sabrina Sato",
+    name: "Sabrina Sato",
     shortDescription: "Apresentadora.",
     description:
       "Sabrina Sato é uma personalidade da televisão brasileira, conhecida por seu trabalho como apresentadora em diversos programas de entretenimento. Ela ganhou destaque por sua espontaneidade e carisma, conquistando uma base sólida de fãs ao longo de sua carreira.",
@@ -38,7 +38,7 @@ export const data = [
   },
   {
     id: "wagner-moura",
-    nome: "Wagner Moura",
+    name: "Wagner Moura",
     shortDescription: "Ator e diretor.",
     description:
       "Wagner Moura é um renomado ator e diretor brasileiro, reconhecido por seus papéis marcantes no cinema e na televisão. Ele ganhou destaque internacional por sua atuação como o narcotraficante colombiano Pablo Escobar na série de televisão 'Narcos'.",
