@@ -21,14 +21,18 @@ describe ('testes da função filterData', () => {
 
 describe('testes da função sortData', () => {
 
-  it('deve retornar o nome da função', () => {
+  it('deve retornar a lista em ordem crescente', () => {
+    expect(sortData()).toBe('sortData');
+  });
+
+  it('deve retornar a lista em ordem decrescente', () => {
     expect(sortData()).toBe('sortData');
   });
 });
 
 describe('testes da função computeStats', () => {
 
-  it('deve retornar o nome da função', () => {
+  it('deve retornar a estatística da média de idade das celebridades', () => {
     expect(computeStats()).toBe('computeStats');
   });
 });
