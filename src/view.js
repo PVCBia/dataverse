@@ -19,3 +19,4 @@ export const renderItems = (data) => {
   result = result + '</ul>'
   //console.log(result)
   return result
+}

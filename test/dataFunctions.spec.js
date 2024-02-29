@@ -4,7 +4,7 @@
 import { filterData, sortData, computeStats } from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
-console.log(fakeData);
+//console.log(fakeData);
 
 describe ('testes da função filterData', () => {
 
