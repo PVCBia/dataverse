@@ -11,15 +11,6 @@ export const filterData = (data, filterBy, value) => {
   return dadosFiltrados;
 }
 
-// // dados - ordenação - tipo asc/desc
-// export const sortData = (data, sortBy, sortOrder) => {
-// //chamar a função aqui
-// data.sort(
-//  (a, b) => (a.name - b.name)-- -
-// );
-// return "sortData"
-// }
-
 
 //      fitro ordem - funcionando
 // // dados - ordenação - tipo asc/desc
