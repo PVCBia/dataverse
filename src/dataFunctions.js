@@ -3,22 +3,11 @@
 //      fitro nacionalidade - funcionando
 //dados - filtro - valor
 export const filterData = (data, filterBy, value) => {
-  //console.log(data)
   const dadosFiltrados = data.filter(
     (artista) => artista.facts[filterBy] === value
   );
-  //console.log(dadosFiltrados)
   return dadosFiltrados;
-}
-
-// // dados - ordenação - tipo asc/desc
-// export const sortData = (data, sortBy, sortOrder) => {
-// //chamar a função aqui
-// data.sort(
-//  (a, b) => (a.name - b.name)-- -
-// );
-// return "sortData"
-// }
+};
 
 
 //      fitro ordem - funcionando
@@ -38,9 +27,11 @@ export const sortData = (data, sortBy, sortOrder) => {
 };
 
 
-// // cálculos estatisticos básicos - esta função deve usar o método reduce.
-// export const computeStats = (data) => { 
-//   return "computeStats"
-// }
-
-
+// // cálculos estatísticos básicos
+//esta função deve usar o método reduce.
+export const computeStats = (data) => {
+  const estatistica = data.map(item => item.facts).filter(value => !isNaN(value));
+  //const conta = estatistica.reduce((accumulator) => accumulator + 1, 0);
+  const conta = estatistica.reduce((accumulator) => accumulator + 1, 0);
+  return conta;
+};
