@@ -44,7 +44,7 @@ h1 {
     color: var(--color-laranja);
 }
 
-h2 {
+h3 {
     font-size: 1.3rem;
     margin: 1rem;
     text-shadow: 5px 5px 10px var(--color-preto);
@@ -99,7 +99,7 @@ ul {
     flex-direction:row
 }
 
-li {
+li, .cardsUnitarios {
     box-sizing: border-box;
     border: 3px solid var(--color-preto);
     border-radius: 20px;
@@ -110,6 +110,7 @@ li {
     height: auto;
     width: 23rem;
     margin: 2rem;
+    content: normal;
 }
 
 /* .cardsUnitarios {
