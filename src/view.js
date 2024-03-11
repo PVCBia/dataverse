@@ -1,10 +1,7 @@
 export const renderItems = (data) => {
 
-    let result = '<ul>'
+  let result = '<ul>'
   
-  // colocar "itemtype" na li
-  // inserir "itemprop" ???
-
   data.forEach((element) => {
     result += `
     <li class = "cardsUnitarios">
@@ -22,6 +19,9 @@ export const renderItems = (data) => {
     `;
   })
   result = result + '</ul>'
-  //console.log(result)
   return result
 }
+
+//      implementações futuras:
+// colocar "itemtype" na li
+// inserir "itemprop" na li
