@@ -1,115 +1,73 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="imagens/favicon-32x32.png" />
+    <title>Dataverse - Celebridades</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="imagens/favicon-32x32.png"/>
-  <title>Dataverse - Celebridades</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header>
-    <!-- <img src="imagens/celebCapa2.png" alt="Nome do site: Celebridades" /> -->
-    <div>
-      <h1>Celebridades</h1>
-      <h2>- vida pessoal e profissional -</h2>
-    </div>
-  </header>
-
-  <main>
-    <nav>
-      <div class="caixaTexto">
-        <h3>
-          Aqui você encontra os tópicos mais pesquisados sobre os famosos.
-          Faça sua escolha selecionando por filtro.
-        </h3>
-        <!--<span class="titles_length">24 famosos</span> para as métricas -->
+  <body>
+    <header>
+      <div>
+        <h1>Celebridades</h1>
+        <h2>- vida pessoal e profissional -</h2>
       </div>
+    </header>
 
-      <!--sessão dos filtros -->
-      <div class="painelEscolhas">
-        <section class="painelInteratividade">
-          <label for="filtroNacionalidade" id="selecionaNacionalidade" class="filtros">Nacionalidade:</label>
-          <select id="filtroNacionalidade" name="nacionalidade" data-testid="select-filter">
-            <option id="todosNacionalidade" value="todos" selected="" hidden="" disabled="">
-              Selecione
-            </option>
-            <option value="Brasileira">Brasileira</option>
-            <option value="Norte-Americana">Norte-Americana</option>
-            <option value="Sul-Africana">Sul-Africana</option>
-            <option value="Sul-Coreana">Sul-Coreana</option>
-            <option value="Barbadiana">Barbadiana</option>
-            <option value="Suíça">Suíça</option>
-            <option value="Britânica">Britânica</option>
-            <option value="Portuguesa">Portuguesa</option>
-            <option value="Colombiana">Colombiana</option>
-            <option value="Paquistanesa">Paquistanesa</option>
-          </select>
+    <main>
+      <nav>
+        <div class="caixaTexto">
+          <h3>
+            Aqui você encontra os tópicos mais pesquisados sobre os famosos.
+            Faça sua escolha selecionando por filtro.
+          </h3>
+          <span class="quantidadeCelebridades">celebridades</span>
+        </div>
 
-          <!--
-        <select data-testid="select-sort" name="Selecione" id="areaDeAtuacao">
-          <option value="vazio">Selecione</option>
-          <option value="vazio">Selecione</option>
-          <option value="musica">Música</option>
-          <option value="esportes">Esportes</option>
-          <option value="cinema">Cinema</option>
-          <option value="norteAmericara">Moda</option>
-          <option value="brasileira">Cultura Pop</option>
-          <option value="norteAmericara">Ativismo</option>
-          <option value="brasileira">Ciências e Tecnologia</option>
-        </select>
+        <!--sessão para os filtros -->
+        <div class="painelEscolhas">
+          <section class="painelInteratividade">
+            <label for="filtroNacionalidade" id="selecionaNacionalidade" class="filtros">Nacionalidade:</label>
+            <select id="filtroNacionalidade" name="nacionalidade" data-testid="select-filter">
+              <option id="todosNacionalidade" value="todos" selected="" hidden="" disabled="">
+                Selecione
+              </option>
+              <option value="Brasileira">Brasileira</option>
+              <option value="Norte-Americana">Norte-Americana</option>
+              <option value="Sul-Africana">Sul-Africana</option>
+              <option value="Sul-Coreana">Sul-Coreana</option>
+              <option value="Barbadiana">Barbadiana</option>
+              <option value="Suíça">Suíça</option>
+              <option value="Britânica">Britânica</option>
+              <option value="Portuguesa">Portuguesa</option>
+              <option value="Colombiana">Colombiana</option>
+              <option value="Paquistanesa">Paquistanesa</option>
+            </select>
+            <!--repetir o exemplo para os outro filtros-->
 
-        <select data-testid="select-sort" name="Selecione" id="curiosidade">
-          <option value="vazio">Selecione</option>
-          <option value="pessoal">Vida Pessoal</option>
-          <option value="profissional">Vida Profissional</option>
-        </select>
-       -->
+            <!--sessão para ordenação-->
+            <label for="filtroOrdem" id="selecionaOrdem" class="filtros">Ordenar por:</label>
+            <select id="filtroOrdem" name="escolherOrdem" data-testid="select-sort">
+              <option id="todosOrdem" value="todos" selected="" hidden="" disabled="">
+                Selecione
+              </option>
+              <option value="asc">A - Z</option>
+              <option value="desc">Z - A</option>
+            </select>
 
-          <!--repetir o exemplo para os outro filtros-->
+            <!--criar botão de limpar-->
+            <button id="botaoLimpar" data-testid="button-clear">Limpar</button>
+          </section>
+        </div>
+      </nav>
 
-          <!--sessão para ordenação-->
-          <label for="filtroOrdem" id="selecionaOrdem" class="filtros">Ordenar por:</label>
-          <select id="filtroOrdem" name="escolherOrdem" data-testid="select-sort">
-            <option id="todosOrdem" value="todos" selected="" hidden="" disabled="">
-              Selecione
-            </option>
-            <option value="asc">A - Z</option>
-            <option value="desc">Z - A</option>
-          </select>
+      <!--sessão para os cards-->
+      <section id="root" class="listaCards"></section>
+    </main>
 
-          <!--criar botão de limpar-->
-          <button id="botaoLimpar" data-testid="button-clear">
-            Limpar
-          </button>
-        </section>
-      </div>
-    </nav>
+    <footer>Criado por <strong>Bia Carneiro</strong>.</footer>
 
-    <!--sessão para os cards-->
-    <section id="root" class="listaCards">
-      <!-- <ul class="conjuntoCards">
-        <li itemscope="" itemtype="listaCelrbridades" class="conjuntoCards">
-          <div class="conjuntoCards">
-            <dl itemscope="" itemtype="#">
-              <dt><img
-                  src="https://br.web.img2.acsta.net/pictures/20/11/19/16/21/4456129.jpg"
-                  alt="Cantora Anitta" itemprop="Anitta" class="conteudoCard"></dt>
-              <dd itemprop="name" class="nomeCard">Anitta</dd>
-              <dd itemprop="sort-order" class="areaDeAtuacao">Música</dd>
-              <dd itemprop="shortDescription" class="shortDescription">Cantora e compositora.
-              </dd>
-              <dd itemprop="facts" class="curiosidade">É uma defensora dos direitos LGBTQ+.</dd>
-            </dl>
-          </div>
-        </li>
-      </ul>  -->
-    </section>
-  </main>
-
-  <footer>Criado por <strong>Bia Carneiro</strong>.</footer>
-
-  <script src="main.js" type="module"></script>
-</body>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
