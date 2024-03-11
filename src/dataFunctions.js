@@ -30,7 +30,8 @@ export const sortData = (data, sortBy, sortOrder) => {
 // // cálculos estatísticos básicos
 //esta função deve usar o método reduce.
 export const computeStats = (data) => {
-  const stats = data.map(item => item.facts).filter(value => !isNaN(value));
-  const count = stats.reduce((accumulator) => accumulator + 1, 0);
-  return count;
+  const estatistica = data.map(item => item.facts).filter(value => !isNaN(value));
+  //const conta = estatistica.reduce((accumulator) => accumulator + 1, 0);
+  const conta = estatistica.reduce((accumulator) => accumulator + 1, 0);
+  return conta;
 };
