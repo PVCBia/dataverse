@@ -19,16 +19,15 @@ describe ('testes da função filterData', () => {
 });
 
 describe('testes da função sortData', () => {
-  escolherOrdem
-
+  
   it('deve retornar a lista em ordem crescente', () => {
     const dadosOrdenados = sortData(fakeData, 'name', 'asc')
-    expect(dadosOrdenados()).toStrictEqual(mockAscendente);
+    expect(dadosOrdenados).toStrictEqual(mockAscendente);
   });
 
   it('deve retornar a lista em ordem decrescente', () => {
     const dadosOrdenados = sortData(fakeData, 'name', 'desc')
-    expect(dadosOrdenados()).toStrictEqual(mockDescendente);
+    expect(dadosOrdenados).toStrictEqual(mockDescendente);
   });
 });
 
@@ -46,4 +45,4 @@ describe('testes da função computeStats', () => {
     //pela função computeStats quando o array fakeData é 
     //passado como argumento
   })
-  });
+});
