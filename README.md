@@ -1,3 +1,5 @@
+[<img src="src\imagens\versaoWebZoom.jpg">]()
+
 # Dataverse - Celebridades
 
 Construção um site para visualizar um conjunto de dados, gerados por meio de técnicas de prompting em ferramentas de inteligência artificial. Como entrega final, você terá um site que permitirá visualizar os dados, filtrá-los, ordená-los e calcular estatísticas.
@@ -16,16 +18,25 @@ Construção um site para visualizar um conjunto de dados, gerados por meio de t
 ## Iteração de protótipos e paleta de cores
 
 Protótipo de baixa fidelidade - Mobile:
+
 [<img src="src\imagens\protótipoMobile1.jpg">]()
 
+
 Protótipo de baixa fidelidade - Web: 
+
 [<img src="src\imagens\prototipoWeb1.jpg">]()
 
+
 Protótipo de alta fidelidade - Mobile:
+
 [<img src="src\imagens\prototiMoobile2.jpg">]()
 
+
 Protótipo de alta fidelidade - Web:
+
 [<img src="src\imagens\prototipoWeb2.jpg">]()
+
+
 
 Paleta de cores:
 
