@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="imagens/favicon-32x32.png" />
+    <title>Dataverse - Celebridades</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1>Celebridades</h1>
+        <h3>- vida pessoal e profissional -</h3>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+        <div class="caixaTexto">
+          <h2>
+            Aqui você encontra os tópicos mais pesquisados sobre os famosos.
+            Faça sua escolha selecionando por filtro.
+          </h2>
+          <span class="quantidadeCelebridades">celebridades</span>
+        </div>
+
+        <!--sessão para os filtros -->
+        <div class="painelEscolhas">
+          <section class="painelInteratividade">
+            <label for="filtroNacionalidade" id="selecionaNacionalidade" class="filtros">Nacionalidade:</label>
+            <select id="filtroNacionalidade" name="nacionalidade" data-testid="select-filter">
+              <option id="todosNacionalidade" value="todos" selected="" hidden="" disabled="">
+                Selecione
+              </option>
+              <option value="Brasileira">Brasileira</option>
+              <option value="Norte-Americana">Norte-Americana</option>
+              <option value="Sul-Africana">Sul-Africana</option>
+              <option value="Sul-Coreana">Sul-Coreana</option>
+              <option value="Barbadiana">Barbadiana</option>
+              <option value="Suíça">Suíça</option>
+              <option value="Britânica">Britânica</option>
+              <option value="Portuguesa">Portuguesa</option>
+              <option value="Colombiana">Colombiana</option>
+              <option value="Paquistanesa">Paquistanesa</option>
+            </select>
+            <!--repetir o exemplo para os outro filtros-->
+
+            <!--sessão para ordenação-->
+            <label for="filtroOrdem" id="selecionaOrdem" class="filtros">Ordenar por:</label>
+            <select id="filtroOrdem" name="escolherOrdem" data-testid="select-sort">
+              <option id="todosOrdem" value="todos" selected="" hidden="" disabled="">
+                Selecione
+              </option>
+              <option value="asc">A - Z</option>
+              <option value="desc">Z - A</option>
+            </select>
+
+            <!--criar botão de limpar-->
+            <button id="botaoLimpar" data-testid="button-clear">Limpar</button>
+          </section>
+        </div>
+      </nav>
+
+      <!--sessão para os cards-->
+      <section id="root" class="listaCards"></section>
+    </main>
+
+    <footer>Criado por <strong>Bia Carneiro</strong>.</footer>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
