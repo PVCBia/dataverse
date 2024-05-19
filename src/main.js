@@ -15,7 +15,7 @@ const mostraCards = (dados) => {
 mostraCards(dadosRenderizados);
 
 //      filtro nacionalidade - mostrando opções - funcionando corretamente
-const filtroNacionalidade = document.querySelector('filtroNacionalidade');
+const filtroNacionalidade = document.querySelector('#filtroNacionalidade');
 filtroNacionalidade.addEventListener('change', (event) => {
   const valorDoFiltro = event.target.value;
   const cardsFiltrados = filterData(data, 'nacionalidade', valorDoFiltro);
@@ -25,7 +25,7 @@ filtroNacionalidade.addEventListener('change', (event) => {
 });
 
 //      filtro ordem - mostrando opções - funcionando corretamente
-const filtroOrdem = document.querySelector('filtroOrdem');
+const filtroOrdem = document.querySelector('#filtroOrdem');
 filtroOrdem.addEventListener('change', () => {
   const valorDaOrdem = filtroOrdem.value;
   dadosRenderizados = sortData(dadosRenderizados, 'name', valorDaOrdem); // Ordena os dados renderizados
@@ -41,13 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
 //      atualiza o número de celebridades mostradas
 const celebridadesMostradas = (data) => {
   const numeroCelebridades = computeStats(data);
-  celebridadeSpan.innerText = `${numeroCelebridades} celebridades.`;
+  celebridadeSpan.innerHTML = `${numeroCelebridades} celebridades.`;
 }
 
 
 
 //      botão de limpar / definindo valor índece zero
-const limparSelecoes = document.querySelector('botaoLimpar');
+const limparSelecoes = document.querySelector('#botaoLimpar');
 limparSelecoes.addEventListener('click', () => {
   // // Define o valor selecionado como a primeira opção (índice 0)/ volta a configuração "inicial"
   filtroNacionalidade.selectedIndex = 0;
